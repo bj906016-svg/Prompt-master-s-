@@ -10,22 +10,22 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
+      font-family: Arial, sans-serif;
       background: #0b1020;
-      color: white;
+      color: #ffffff;
       line-height: 1.6;
     }
 
     header {
       background: #111936;
-      padding: 20px;
+      border-bottom: 1px solid #29345f;
+      padding: 18px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #29345f;
+      z-index: 10;
     }
 
     nav {
@@ -38,35 +38,36 @@
     }
 
     .logo {
-      font-size: 25px;
+      font-size: 24px;
       font-weight: bold;
-      color: #7c8cff;
+      color: #8b96ff;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
+      margin-left: 15px;
     }
 
     nav a:hover {
-      color: #8f9cff;
+      color: #8b96ff;
     }
 
     .hero {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
       padding: 90px 20px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 8vw, 75px);
-      margin-bottom: 20px;
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: 1.1;
+      margin-bottom: 25px;
     }
 
     .hero h1 span {
-      color: #7c8cff;
+      color: #8b96ff;
     }
 
     .hero p {
@@ -83,13 +84,13 @@
     .btn {
       display: inline-block;
       padding: 14px 24px;
-      margin: 8px;
+      margin: 7px;
       border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
       background: #7c8cff;
       color: white;
+      text-decoration: none;
       border: none;
+      font-weight: bold;
       cursor: pointer;
     }
 
@@ -106,19 +107,19 @@
 
     .section-title {
       text-align: center;
-      font-size: 35px;
-      margin-bottom: 15px;
+      font-size: 36px;
+      margin-bottom: 12px;
     }
 
     .section-text {
       text-align: center;
       color: #aeb7d4;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
@@ -130,3 +131,255 @@
     }
 
     .card h3 {
+      color: #8b96ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b7bfd8;
+    }
+
+    .generator {
+      background: #111936;
+      border: 1px solid #29345f;
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    textarea,
+    select {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: #0b1020;
+      color: white;
+      border: 1px solid #39466f;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    #result {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      min-height: 130px;
+      white-space: pre-wrap;
+      background: #0b1020;
+      border: 1px solid #39466f;
+      border-radius: 10px;
+      color: #dce1f5;
+    }
+
+    .about-box {
+      background: #151d3b;
+      border: 1px solid #29345f;
+      border-radius: 18px;
+      padding: 30px;
+      color: #b7bfd8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #070b17;
+      color: #8f98b7;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Prompt Masters</div>
+
+    <div>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#generator">Generator</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <h1>Master the Art of <span>AI Prompts</span></h1>
+
+    <p>
+      Create clearer, smarter and more powerful prompts for AI.
+      Prompt Masters helps you turn simple ideas into effective prompts.
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="#generator">Create a Prompt</a>
+      <a class="btn secondary" href="#features">Explore Features</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2 class="section-title">Powerful Features</h2>
+
+    <p class="section-text">
+      Everything you need to improve the way you work with AI.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Prompt Generator</h3>
+        <p>
+          Turn your idea into a structured AI prompt in seconds.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Prompt Improvement</h3>
+        <p>
+          Make unclear prompts more specific, useful and effective.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Organize Ideas</h3>
+        <p>
+          Create and manage powerful prompts for different projects.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Learn Prompting</h3>
+        <p>
+          Learn practical techniques for getting better results from AI.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="generator">
+    <h2 class="section-title">AI Prompt Generator</h2>
+
+    <p class="section-text">
+      Enter your idea and let Prompt Masters structure it for you.
+    </p>
+
+    <div class="generator">
+
+      <label for="idea">What do you want AI to help you with?</label>
+
+      <textarea
+        id="idea"
+        placeholder="Example: Create a marketing plan for my clothing business..."
+      ></textarea>
+
+      <label for="role">Choose an AI role</label>
+
+      <select id="role">
+        <option value="expert">Expert</option>
+        <option value="business consultant">Business Consultant</option>
+        <option value="teacher">Teacher</option>
+        <option value="marketing specialist">Marketing Specialist</option>
+        <option value="software developer">Software Developer</option>
+        <option value="content creator">Content Creator</option>
+      </select>
+
+      <button class="btn" onclick="generatePrompt()">
+        Generate Prompt
+      </button>
+
+      <div id="result"></div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Prompt Masters</h2>
+
+    <div class="about-box">
+      <p>
+        Prompt Masters is an AI prompt engineering platform designed
+        to help students, creators, entrepreneurs and professionals
+        communicate better with artificial intelligence.
+      </p>
+
+      <br>
+
+      <p>
+        Our goal is simple: make powerful prompt engineering easier
+        for everyone.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Prompt Masters. Built for the future of AI.</p>
+</footer>
+
+<script>
+  function generatePrompt() {
+
+    const idea = document.getElementById("idea").value.trim();
+    const role = document.getElementById("role").value;
+    const result = document.getElementById("result");
+
+    if (!idea) {
+      result.style.display = "block";
+      result.textContent = "Please enter an idea first.";
+      return;
+    }
+
+    const prompt =
+`You are an experienced ${role}.
+
+Your task is to help me with the following:
+
+${idea}
+
+Please provide a clear, practical and detailed response.
+
+Requirements:
+- Understand the goal before answering.
+- Give step-by-step guidance where useful.
+- Use simple and professional language.
+- Include examples where appropriate.
+- Ask for clarification only if absolutely necessary.
+
+Start by addressing the main objective directly.`;
+
+    result.style.display = "block";
+    result.textContent = prompt;
+  }
+</script>
+
+</body>
+        </html>
